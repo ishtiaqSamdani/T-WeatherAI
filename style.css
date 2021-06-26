@@ -1,0 +1,197 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    
+}
+
+header::before{
+    background: url('https://source.unsplash.com/1600x900/?tourist places,tourist') no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.navi {
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+    display: flex;
+}
+
+li {
+    list-style: none;
+    padding: 20px 23px;
+}
+li:hover{
+    cursor: pointer;
+    color:aqua;
+    text-shadow: 1px 1px 2px black;
+    transition: all 0.3s;
+}
+
+section {
+    height: 344px;
+    font-family: 'Bree Serif', serif;
+    margin: 3px 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3.89rem;
+    /* flex-shrink: 2; */
+}
+
+p {
+    text-align: center;
+}
+
+.sam{
+    border: 3px solid rgb(212, 241, 46);
+    font-size: 3rem;
+    padding: 1rem 11rem;
+    border-radius: 2rem;
+    background: transparent;
+    color: white;
+    /* flex-shrink:inherit; */
+    /* invert(100%) */
+    animation: borderor 10s ease-in-out infinite;
+    transition: all 1s;
+}
+.sam:hover{
+    padding: 1.5rem 13rem;
+    color:aqua;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+
+.ish{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1120px){
+    h1 {
+        width: 36rem;
+        font-size: 2.5rem;
+        /* flex-shrink: 2; */
+        text-align: center;
+    }
+    .sam{
+        font-size: 2.5rem;
+    padding: 1rem 7rem;
+    }
+    
+}
+
+@media screen and (max-width:540px){
+    h1 {
+        width: 28rem;
+    font-size: 1.9rem;
+    /* flex-shrink: 2; */
+    text-align: center;
+    }
+    .sam{
+        font-size: 1.5rem;
+        padding: 1rem 4rem;
+    }
+}
+
+@media screen and (max-width:517px){
+    .navi{
+        font-size: 17px;
+    }
+    
+}
+
+@media screen and (max-width:457px){
+    h1 {
+        width: 23rem;
+        font-size: 1.5rem;
+    }
+    .navi{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:375px){
+    li {
+        list-style: none;
+        padding: 20px 11px;
+    }
+    .navi{
+        font-size: 14px;
+    }
+    .sam {
+        font-size: 1.3rem;
+        padding: 1rem 2rem;
+    }
+    h1 {
+        width: 16rem;
+        font-size: 1rem;
+    }
+    section{
+        margin: 2px 104px;
+    }
+
+}
+@keyframes borderor{
+    0%{
+      /* border-top-width: 3px; */
+      border-top-color: rgb(190, 186, 186);
+    }
+    /* 25%{
+      border-top-right-radius: 23px;
+    } */
+    25%{
+      /* border-top-width: 4.5px; */
+      border-top-color: rgb(253, 138, 6);
+      border-top-right-radius: 23px;
+  
+    }
+    26%{
+      border-right-color: rgb(190, 186, 186);
+    }
+    50%{
+      border-top-color: rgb(190, 186, 186);
+      border-right-color: rgb(7, 11, 253);
+      border-end-end-radius:  23px ;
+    }
+    51%{
+  
+      border-bottom-color: rgb(190, 186, 186);
+    }
+    75%{
+      border-right-color: rgb(190, 186, 186);
+      border-bottom-color: rgb(9, 255, 0);
+      border-bottom-left-radius: 23px;
+    }
+    76%{
+  
+      border-left-color: rgb(190, 186, 186);
+    }
+    99%{
+      border-left-color: rgb(214, 0, 0);
+      border-bottom-color: rgb(190, 186, 186);
+      border-top-left-radius: 23px;
+    }
+    100%{
+      border-left-color: rgb(190, 186, 186);
+    }
+  
+    
+  }
