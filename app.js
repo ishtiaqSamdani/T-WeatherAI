@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(auth(config));
 
 app.get('/', (req, res) => {
-    res.render("index", { 
+    res.render("indexer", { 
         isAuthenticated: req.oidc.isAuthenticated(),
         user: req.oidc.user,
     });

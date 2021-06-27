@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mountain Tourist</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <ul class="navi">
+            <% if(user) { %>
+                <li class="item">Welcome <%= user.nickname.charAt(0).toUpperCase() + user.nickname.slice(1) %></li>
+            <% } %>
+            <li class="item">Home</li>
+            <% if(!isAuthenticated) { %>
+            <li class="item"><a href="/login/">Login</a></li>
+            <% } else { %>
+            <li class="item"><a href="/logout/">Logout</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+<hr>
+  
+    <div class="input">
+      <div class="flexy">
+
+        <input type="text" placeholder="Enter the city" class="input_text spa">
+        <input type="date" placeholder="Enter the date (YYYY-MM-DD)" class="date sam spa">
+        <input type="submit" value="Submit" class="submit spa">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="conditions"></p>
+      <p class="desc"></p>
+    </div>
+  </div>
+<script src="/javascript/index.js"></script>
+</body>
+</html>
