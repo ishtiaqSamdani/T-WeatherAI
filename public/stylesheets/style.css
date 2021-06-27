@@ -8,7 +8,7 @@ body {
 }
 
 header::before{
-    background: url('https://source.unsplash.com/1600x900/?tourist places,tourist') no-repeat center center/cover;
+    background: url('https://source.unsplash.com/1600x900/?scenery,nature') no-repeat center center/cover;
     content: "";
     position: absolute;
     top:0;
@@ -46,6 +46,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* position: relative; */
 }
 
 h1 {
@@ -58,7 +59,7 @@ p {
 }
 
 .sam{
-    border: 3px solid rgb(212, 241, 46);
+    border: 3px solid #ffffff;
     font-size: 3rem;
     padding: 1rem 11rem;
     border-radius: 2rem;
@@ -66,8 +67,10 @@ p {
     color: white;
     /* flex-shrink:inherit; */
     /* invert(100%) */
-    animation: borderor 10s ease-in-out infinite;
+    /* animation: borderor 10s ease-in-out infinite; */
     transition: all 1s;
+    overflow: visible;
+    /* position: relative; */
 }
 .sam:hover{
     padding: 1.5rem 13rem;
@@ -195,3 +198,12 @@ p {
   
     
   }
+
+  .btn {
+    padding: 2rem 1rem;
+    margin: auto;
+  
+    background: transparent;
+    color: wheat;
+    /* overflow:visible; */
+}

@@ -16,11 +16,12 @@ var app = express();
 app.set("views", "views");
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true}))
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 app.use(auth(config));
 
 app.get('/', (req, res) => {
-    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+    res.render("index");
+    // res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
 app.listen(process.env.PORT || 3000, function(){
