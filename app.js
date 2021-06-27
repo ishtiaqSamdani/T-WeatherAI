@@ -20,8 +20,10 @@ app.use(express.static(__dirname + '/public'));
 app.use(auth(config));
 
 app.get('/', (req, res) => {
-    res.render("index");
-    // res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+    res.render("index", { 
+        isAuthenticated: req.oidc.isAuthenticated(),
+        user: req.oidc.user,
+    });
 });
 
 app.listen(process.env.PORT || 3000, function(){
